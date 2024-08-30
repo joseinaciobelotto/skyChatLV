@@ -1,0 +1,241 @@
+.containerrr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../../assets/AAA.png');
+    background-size: 150%;
+    background-position: center;
+}
+
+.grupos {
+    width: 100%;
+    height: 100%;
+    border: 2px solid white;
+    background-color: #ffffff00;
+    border-radius:10px 10px 20px 20px;
+    justify-content: center;
+}
+
+.groupInfo
+{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.onlineEmVolta
+{
+    border-radius:  0px 20px 10px 0px;
+    border: 1px solid rgb(255, 255, 255);
+    width: 20%;
+    
+  font-size: 1.3rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  
+  margin-bottom: 2%;
+  margin-left: 1%;
+  
+    display: flex;
+    flex-direction: row;
+    background: rgb(0,110,224,0.0);
+    
+    background: linear-gradient(180deg, rgba(150, 166, 175, 0.7) 0%, rgba(55, 62, 68, 0.3) 33%, rgba(188, 220, 255, 0.5) 83%);
+    text-shadow:
+    0 0 5px #b7dcffa7,
+    /* Luz azul brilhante */
+    0 0 10px #b7dcffa7,
+    0 0 15px #b7dcffa7,
+    0 0 20px #b7dcffa7,
+    0 0 25px #b7dcffa7,
+    0 0 30px #b7dcffa7,
+    0 0 35px #b7dcffa7;
+}
+.o
+{
+    background-color: #ff0000;
+    border-radius: 100%;
+    width: 10%;
+    padding-bottom:10px;
+}
+
+.onlineStatus {
+    background-color: #48ff00;
+    color: white;
+    border-radius: 100%;
+    margin-top: 4px;
+    align-items: center     ;
+    width: 15px;
+    height: 15px;
+    font-weight: 100;
+    letter-spacing: 2px;
+    font-family:  "Montserrat", sans-serif;
+    color: rgb(255, 255, 255);
+    /* Azul claro para o texto */
+  
+    
+}
+
+.salaName {
+   
+    font-family:  "Montserrat", sans-serif;
+    font-weight: 100;
+    border-radius:  20px 0px 0px 10px;
+    border: 2px solid rgb(255, 255, 255);
+    width: 80%;
+    padding-block: 7px;
+ 
+   
+  font-size: 1.3rem;
+  text-align: center;
+  margin-bottom: 2%;
+  
+  border: 1px solid rgba(255, 255, 255, 1);
+  background: linear-gradient(180deg, rgba(150, 166, 175, 0.7) 0%, rgba(55, 68, 59, 0.3) 33%, rgba(188, 220, 255, 0.5) 83%);}
+
+
+
+.neonText {
+  padding: 0.2rem;
+  font-weight: 100;
+  letter-spacing: 2px;
+    margin: 3px;
+    color: rgb(255, 255, 255);
+    /* Azul claro para o texto */
+    text-shadow:
+        0 0 5px #b7dcffa7,
+        /* Luz azul brilhante */
+        0 0 10px #b7dcffa7,
+        0 0 15px #b7dcffa7,
+        0 0 20px #b7dcffa7,
+        0 0 25px #b7dcffa7,
+        0 0 30px #b7dcffa7,
+        0 0 35px #b7dcffa7;
+}
+
+
+
+
+.chatArea {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    width: 100%;
+    max-width: 600px;
+   
+    margin-top:15px;
+   
+    height: 50%;
+
+    border: 1px solid rgba(255, 255, 255, 0.76);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.726) 0%, rgba(0, 37, 204, 0.4) 33%, rgb(0, 162, 255) 83%);
+    
+   
+}
+.message {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    max-width: 60%;
+    color: rgb(0, 0, 0);
+
+ 
+    
+    border: 1px solid rgba(255, 255, 255, 1);
+    
+    align-self: flex-start;
+    margin-left: 10px;
+    margin-right: 10px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.4) 0%, rgba(75, 183, 255, 0.4) 33%, rgba(0,189,255,0.4) 83%);
+    background-color: white;
+}
+
+.userMessage {
+    background: linear-gradient(180deg, rgba(255,255,255,0.4) 0%, rgba(25, 196, 139, 0.4) 33%, rgba(58, 255, 133, 0.4) 83%);
+    background-color: white;
+    align-self: flex-end;
+    text-align: right;
+}
+
+.senderName {
+    font-weight: bold;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  
+}
+
+.messageText {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    
+}
+
+.chatItem {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.contactImage {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.chatInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.chatHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.contactName {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.onlineStatus {
+    background-color: #00ff4c;
+    color: rgb(0, 255, 0);
+    border-radius: 50%;
+    
+    font-size: 12px;
+}
+
+.chatBody {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lastMessage {
+    color: #555;
+}
+
+.lastMessageDate {
+    color: #888;
+    font-size: 12px;
+}
+
+.inputSend
+{
+    background: linear-gradient(180deg, rgba(150, 166, 175, 0.7) 0%, rgba(21, 255, 0, 0.11) 33%, rgba(0, 107, 75, 0.5) 83%);
+  
+}
