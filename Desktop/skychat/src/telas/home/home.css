@@ -1,0 +1,180 @@
+.containerr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../../assets/AAA.png');
+    background-size: 150%;
+    background-position: center;
+
+    
+}
+
+.grupos {
+    width: 100%;
+    height: 100%;
+    border: 1px solid white;
+    background-color: #ffffff00;
+
+    justify-content: center;
+
+    background: linear-gradient(180deg, rgba(255,255,255,0.4) 0%, rgba(0,110,224,0.4) 33%, rgba(0,189,255,0.4) 83%);
+    
+}
+
+
+.salas2  {
+   
+    font-family:  "Montserrat", sans-serif;
+    font-weight: 100;
+    border-radius:  20px 0px 0px 10px;
+    border: 2px solid rgb(255, 255, 255);
+    width: 80%;
+   align-self: center;
+
+
+   
+  font-size: 1.3rem;
+  text-align: center;
+  margin-bottom: 2%;
+  
+  border: 1px solid rgba(255, 255, 255, 1);
+  background: linear-gradient(180deg, rgba(150, 166, 175, 0.7) 0%, rgba(55, 62, 68, 0.3) 33%, rgba(188, 220, 255, 0.5) 83%);
+  max-height: 70px;
+
+}
+
+.salasInfo2
+{
+
+display:flex ;
+flex-direction: row;
+}
+.numOf
+{
+    border-radius:  0px 20px 10px 0px;
+    border: 1px solid rgb(255, 255, 255);
+    width: 20%;
+    
+  font-size: 1.3rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  max-height: 70px;
+
+  margin-bottom: 2%;
+  margin-left: 1%;
+  
+    display: flex;
+    flex-direction: row;
+    background: rgb(0,110,224,0.0);
+    
+    background: linear-gradient(180deg, rgba(150, 166, 175, 0.7) 0%, rgba(55, 62, 68, 0.3) 33%, rgba(188, 220, 255, 0.5) 83%);
+    text-shadow:
+    0 0 5px #b7dcffa7,
+    /* Luz azul brilhante */
+    0 0 10px #b7dcffa7,
+    0 0 15px #b7dcffa7,
+    0 0 20px #b7dcffa7,
+    0 0 25px #b7dcffa7,
+    0 0 30px #b7dcffa7,
+    0 0 35px #b7dcffa7;
+}
+  
+
+
+.neonText2 {
+
+  font-weight: 100;
+  letter-spacing: 2px;
+   
+    color: rgb(255, 255, 255);
+    /* Azul claro para o texto */
+  /*  text-shadow:
+        0 0 5px #b7dcffa7,
+        /* Luz azul brilhante */
+      /*      0 0 10px #b7dcffa7,
+        0 0 15px #b7dcffa7,
+        0 0 20px #b7dcffa7,
+        0 0 25px #b7dcffa7,
+        0 0 30px #b7dcffa7,
+        0 0 35px #b7dcffa7;*/
+}
+
+.armm {
+    width: 32.6%;
+    height: 5.1%;
+}
+
+.arm {
+    width: 32%;
+    height: 80%;
+    padding-bottom: 4%;
+}
+
+
+
+
+.chatItem {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    max-width: 500px;
+    border-bottom: 2px solid #002fff;
+   justify-content: center;
+    margin: 7px;
+    margin-top:17px;
+
+    border-radius:100px; 
+    border-color: 1px solid white;
+
+   background-color: rgb(255, 255, 255, 0.5);
+}
+
+
+.chatInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.chatHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+}
+
+.contactName2 {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.onlineStatus2 {
+    background-color: #48ff00;
+    width: 15px;
+    height: 15px;
+    margin-top: 3px;
+    color: #40ff00;
+    border-radius: 50%;
+    
+    font-size: 12px;
+}
+
+.chatBody {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lastMessage2 {
+    color: #555;
+}
+
+.lastMessageDate2 {
+    padding-right: 10px;
+    color: #555;
+    font-size: 12px;
+}
