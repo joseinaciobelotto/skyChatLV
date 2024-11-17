@@ -30,7 +30,7 @@ function Login() {
           console.log(response)
           // Agora que o token está armazenado, podemos navegar para a página principal ou qualquer outra página protegida
           setTimeout(() => {
-            navigate('/');
+            navigate('/home');
           }, 1000);
         } else {
           console.error("Token não recebido da API");
