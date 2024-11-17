@@ -131,7 +131,7 @@ function Chat() {
             >
               <p className="font-bold">{mensagem.nick}</p>
               <p>{mensagem.msg}</p>
-              <p className="text-xs text-gray-300">{formatarData(mensagem.timestamp)}</p>
+              <p className="text-xs text-black-300">{formatarData(mensagem.timestamp)}</p>
             </div>
           ))
         )}
