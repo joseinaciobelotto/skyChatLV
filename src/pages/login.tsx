@@ -1,4 +1,4 @@
-
+import  { useState } from 'react';
 import imagem from '../assets/Component1.png';
 import gif from '../assets/videoplayback.gif'; // Substitua pelo caminho correto
 import { useNavigate } from 'react-router-dom';
