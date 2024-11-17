@@ -1,4 +1,4 @@
-
+import  { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import imagem from '../assets/AAA.png'; // Ajuste o caminho da imagem conforme necessário
