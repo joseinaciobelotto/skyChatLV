@@ -45,7 +45,7 @@ function Login() {
     <div className="flex justify-center items-center flex-col w-full h-screen bg-cover bg-center" style={{ backgroundImage: `url(${imagem2})` }}>
       <img src={imagem} className="mb-16 w-[70vw]" alt="Descrição da imagem" />
       <input
-        className="bg-transparent border-2 border-solid border-[#FFFFFF] text-black mb-8 mt-4 px-5 py-4 w-[24rem] rounded-full text-lg focus:bg-gradient-to-t focus:from-[#00B7FF1A] focus:to-[#FFFFFF1A]"
+        className="bg-transparent border-2 border-solid border-[#FFFFFF] text-black mb-8 mt-4 px-5 py-4 w-[24rem] rounded-full text-lg focus:bg-gradient-to-t focus:from-[#00B7FF1A] focus:to-[#FFFFFF1A] placeholder-black"
         value={nome}
         onChange={(e) => setNome(e.target.value)}
         placeholder="Digite seu nome"
