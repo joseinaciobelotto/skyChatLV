@@ -14,6 +14,7 @@ function Chat() {
   const nickUsuario = localStorage.getItem('nick') || "Usuário";
   const token = localStorage.getItem('token') || "";
 
+  // Busca todas as salas assim que o componente for montado
   useEffect(() => {
     const fetchSalas = async () => {
       try {
@@ -29,10 +30,10 @@ function Chat() {
     fetchSalas();
   }, []);
 
+  // Atualiza as mensagens sempre que a sala for alterada
   useEffect(() => {
     if (salaId && salas.length > 0) {
       const sala = salas.find((s) => s._id === salaId); // Encontra a sala com o id correspondente
-
       if (sala) {
         setMensagens(sala.msgs); // Atualiza as mensagens com as da sala encontrada
       }
@@ -41,29 +42,36 @@ function Chat() {
 
   // Função para buscar novas mensagens a cada 2 segundos
   useEffect(() => {
-    const interval = setInterval(() => {
-      const fetchMensagens = async () => {
-        try {
-          if (salaId) {
-            const response = await axios.get(`https://chat-api-umber-ten.vercel.app/sala/${salaId}/mensagens`, {
-              headers: {
-                'token': token,
-              },
-            });
-            setMensagens(response.data); // Atualiza as mensagens
-          }
-        } catch (error) {
-          console.error('Erro ao buscar mensagens:', error);
+    if (!salaId) return;
+
+    const fetchMensagens = async () => {
+      try {
+        const response = await axios.get(`https://chat-api-umber-ten.vercel.app/sala/${salaId}/mensagens`, {
+          headers: {
+            'token': token,
+          },
+        });
+        // Verifica se há novas mensagens
+        if (JSON.stringify(mensagens) !== JSON.stringify(response.data)) {
+          setMensagens(response.data); // Atualiza as mensagens
         }
-      };
+      } catch (error) {
+        console.error('Erro ao buscar mensagens:', error);
+      }
+    };
 
+    const interval = setInterval(() => {
       fetchMensagens(); // Chama a função de busca de mensagens
-
     }, 2000); // 2 segundos
 
-    return () => clearInterval(interval); // Limpa o intervalo quando o componente for desmontado
-  }, [salaId, token]);
+    // Busca as mensagens imediatamente quando a sala for carregada
+    fetchMensagens();
 
+    // Limpa o intervalo quando o componente for desmontado ou o `salaId` mudar
+    return () => clearInterval(interval);
+  }, [salaId, token, mensagens]); // A dependência inclui mensagens para comparar novas mensagens com as antigas
+
+  // Função para formatar a data
   const formatarData = (timestamp: number) => {
     const data = new Date(timestamp);
     return new Intl.DateTimeFormat('pt-BR', {
@@ -128,7 +136,7 @@ function Chat() {
       className="flex flex-col justify-center items-center w-screen h-screen bg-cover bg-center"
       style={{ backgroundImage: `url(${imagem})` }}
     >
-      <div className="w-full max-w-3xl  border-white bg-transparent rounded-lg flex flex-col">
+      <div className="w-full max-w-3xl border-white bg-transparent rounded-lg flex flex-col">
         <div className="flex w-full mb-4">
           <div className="w-4/5 bg-gradient-to-b from-[rgba(150,166,175,0.7)] via-[rgba(55,62,68,0.3)] to-[rgba(188,220,255,0.5)] text-center border-2 border-white rounded-tl-lg rounded-bl-lg p-2">
             <p className="text-white font-light tracking-wide neonText">{nomeSala}</p>
