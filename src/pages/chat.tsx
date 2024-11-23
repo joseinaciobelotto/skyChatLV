@@ -1,4 +1,4 @@
-import  { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import imagem from '../assets/AAA.png'; // Ajuste o caminho da imagem conforme necessário
@@ -39,6 +39,31 @@ function Chat() {
     }
   }, [salaId, salas]);
 
+  // Função para buscar novas mensagens a cada 2 segundos
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const fetchMensagens = async () => {
+        try {
+          if (salaId) {
+            const response = await axios.get(`https://chat-api-umber-ten.vercel.app/sala/${salaId}/mensagens`, {
+              headers: {
+                'token': token,
+              },
+            });
+            setMensagens(response.data); // Atualiza as mensagens
+          }
+        } catch (error) {
+          console.error('Erro ao buscar mensagens:', error);
+        }
+      };
+
+      fetchMensagens(); // Chama a função de busca de mensagens
+
+    }, 2000); // 2 segundos
+
+    return () => clearInterval(interval); // Limpa o intervalo quando o componente for desmontado
+  }, [salaId, token]);
+
   const formatarData = (timestamp: number) => {
     const data = new Date(timestamp);
     return new Intl.DateTimeFormat('pt-BR', {
@@ -67,7 +92,7 @@ function Chat() {
           novaMsg,
           {
             headers: {
-             'token': token, // Passa o token no header Authorization
+              'token': token, // Passa o token no header Authorization
               'nick': nickUsuario, // Passa o nick como um header adicional
             },
           }
@@ -103,7 +128,7 @@ function Chat() {
       className="flex flex-col justify-center items-center w-screen h-screen bg-cover bg-center"
       style={{ backgroundImage: `url(${imagem})` }}
     >
-    <div className="w-full max-w-3xl  border-white bg-transparent rounded-lg flex flex-col">
+      <div className="w-full max-w-3xl  border-white bg-transparent rounded-lg flex flex-col">
         <div className="flex w-full mb-4">
           <div className="w-4/5 bg-gradient-to-b from-[rgba(150,166,175,0.7)] via-[rgba(55,62,68,0.3)] to-[rgba(188,220,255,0.5)] text-center border-2 border-white rounded-tl-lg rounded-bl-lg p-2">
             <p className="text-white font-light tracking-wide neonText">{nomeSala}</p>
